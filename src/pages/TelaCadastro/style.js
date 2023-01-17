@@ -28,7 +28,7 @@ export const Tela = styled.div`
     
     p{
         color:#FFFFFF;
-        font-weight: 400;
+        font-weight: 700;
         font-size: 14px;
         line-height: 17px;
         text-decoration: none;
