@@ -22,10 +22,13 @@ img {
 
 export const Registros = styled.div`
     width: 326px;
-    height: 446px;
+    height: 447px;
     background-color: #FFFFFF;
+    overflow: auto;
     margin-top: 22px;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
     p{
     margin-top: 200px;
     font-family: 'Raleway';
@@ -41,6 +44,7 @@ export const Registros = styled.div`
 
 export const Lancamento = styled.div`
     margin-top:20px;
+    margin-bottom:10px;
     display:flex;
     .dia{
         margin-left: 12px;
@@ -60,8 +64,28 @@ export const Lancamento = styled.div`
     
 `
 
+export const Saldo = styled.div`
+    width:326px;  
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    .saldo{
+        margin-left: 15px;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+   .total{
+    margin-right:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+   }
+`
+
 export const AddInfo = styled.div`
     width: 326px;
+    margin-bottom:15px;
     display: flex;
     justify-content: space-between;
     p{
