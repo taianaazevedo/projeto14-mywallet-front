@@ -7,7 +7,7 @@ export default function Cadastro() {
     return (
         <Container>
             <Tela>
-                <img src={logo} />
+                <img src={logo} alt=""/>
                 <Form>
                     <input type="text" placeholder="Nome" required />
                     <input type="email" placeholder="E-mail" required />

@@ -11,7 +11,7 @@ export default function Login() {
     return (
         <Container>
             <Tela>
-                <img src={logo} />
+                <img src={logo} alt=""/>
                 <Form>
                     <input type="email" placeholder="E-mail" required />
                     <input type="password" placeholder="Senha" required />

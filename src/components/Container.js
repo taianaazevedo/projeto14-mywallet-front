@@ -7,6 +7,13 @@ export const Container = styled.div`
     display: flex;
    flex-direction: column;
    align-items: center;
+   .info{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    color:#FFFFFF;
+    margin-top:25px;
+   }
 
     
 `
