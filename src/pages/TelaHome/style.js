@@ -36,7 +36,28 @@ export const Registros = styled.div`
     text-align: center;
     color: #868686;
     }
+`
 
+
+export const Lancamento = styled.div`
+    margin-top:20px;
+    display:flex;
+    .dia{
+        margin-left: 12px;
+        color: #C6C6C6;
+    }
+    .descricao{
+        width:200px;
+        margin-left: 10px;
+    }
+    .valor{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+        width:62px;
+        color:#C70000;
+    }
+    
 `
 
 export const AddInfo = styled.div`
