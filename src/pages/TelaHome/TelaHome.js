@@ -2,6 +2,7 @@
 import { Container } from "../../components/Container"
 import exit from "../../assets/Exit.png"
 import { Header, Registros, AddInfo, Lancamento, Saldo } from "./style"
+import { Link } from "react-router-dom"
 
 export default function Home() {
     return (
@@ -49,11 +50,15 @@ export default function Home() {
             </Saldo>
             <AddInfo>
                 <div className="addEntrada">
+                    <Link to="/nova-entrada">
                     <ion-icon name="add-circle-outline"></ion-icon>
+                    </Link>                    
                     <p>Nova <br /> entrada</p>
                 </div>
                 <div className="addSaida">
+                    <Link to="/nova-saida">
                     <ion-icon name="remove-circle-outline"></ion-icon>
+                    </Link>
                     <p>Nova <br /> saída</p>
                 </div>
             </AddInfo>

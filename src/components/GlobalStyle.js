@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	background-color: #8C11BE;
 	line-height: 1;
 	font-family: 'Raleway';
 }

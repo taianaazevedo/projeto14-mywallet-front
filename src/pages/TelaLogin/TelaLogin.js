@@ -15,7 +15,7 @@ export default function Login() {
                 <Form>
                     <input type="email" placeholder="E-mail" required />
                     <input type="password" placeholder="Senha" required />
-                    <button type="submit">Entrar</button>
+                    <button type="submit"><strong>Entrar</strong></button>
                     <br />
                     <Link to="/cadastro">
                         <p>Primeira vez? Cadastre-se!</p>
