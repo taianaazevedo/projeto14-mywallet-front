@@ -9,11 +9,11 @@ export default function Cadastro() {
             <Tela>
                 <img src={logo} alt=""/>
                 <Form>
-                    <input type="text" placeholder="Nome" required />
-                    <input type="email" placeholder="E-mail" required />
-                    <input type="password" placeholder="Senha" required />
-                    <input type="password" placeholder="Confirme a senha" required />
-                    <button type="submit"><strong>Cadastrar</strong></button>
+                    <input type="text" placeholder="Nome" required data-test="name"/>
+                    <input type="email" placeholder="E-mail" required data-test="email"/>
+                    <input type="password" placeholder="Senha" required data-test="password"/>
+                    <input type="password" placeholder="Confirme a senha" required data-test="conf-password"/>
+                    <button type="submit" data-test="sign-up-submit"><strong>Cadastrar</strong></button>
                     <br />
                     <Link to="/">
                         <p>Já tem uma conta? Entre agora!</p>

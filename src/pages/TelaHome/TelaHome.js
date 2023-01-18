@@ -8,15 +8,15 @@ export default function Home() {
     return (
         <Container>
             <Header>
-                <p>Olá, fulano</p>
-                <img src={exit} alt="" />
+                <p data-test="user-name">Olá, fulano</p>
+                <img src={exit} alt="" data-test="logout" />
             </Header>
             <Registros>
                 {/* <p>Não há registros de entrada ou saída</p> */}
                 <Lancamento>
                     <div className="dia">20/01</div>
-                    <div className="descricao">Almoço</div>
-                    <div className="valor">20,90</div>
+                    <div className="descricao" data-test="registry-name">Almoço</div>
+                    <div className="valor" data-test="registry-amount">20,90</div>
                 </Lancamento>
                 <Lancamento>
                     <div className="dia">20/01</div>
@@ -46,18 +46,18 @@ export default function Home() {
             </Registros>
             <Saldo>
                 <span className="saldo"><strong>SALDO</strong></span>
-                <span className="total">2.000,00</span>
+                <span className="total" data-test="total-amount">2.000,00</span>
             </Saldo>
             <AddInfo>
                 <div className="addEntrada">
-                    <Link to="/nova-entrada">
-                    <ion-icon name="add-circle-outline"></ion-icon>
-                    </Link>                    
+                    <Link to="/nova-entrada" data-test="new-income">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                    </Link>
                     <p>Nova <br /> entrada</p>
                 </div>
                 <div className="addSaida">
-                    <Link to="/nova-saida">
-                    <ion-icon name="remove-circle-outline"></ion-icon>
+                    <Link to="/nova-saida" data-test="new-expense">
+                        <ion-icon name="remove-circle-outline"></ion-icon>
                     </Link>
                     <p>Nova <br /> saída</p>
                 </div>

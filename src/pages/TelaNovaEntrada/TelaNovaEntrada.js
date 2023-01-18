@@ -6,9 +6,9 @@ export default function NovaEntrada() {
         <Container>
             <p className="info">Nova Entrada</p>
             <Form>
-                <input type="text" placeholder="Valor" required />
-                <input type="text" placeholder="Descrição" required />
-                <button type="submit">Salvar entrada</button>
+                <input type="text" placeholder="Valor" required data-test="registry-amount-input"/>
+                <input type="text" placeholder="Descrição" required data-test="registry-name-input"/>
+                <button type="submit" data-test="registry-save">Salvar entrada</button>
             </Form>
         </Container>
     )

@@ -13,9 +13,9 @@ export default function Login() {
             <Tela>
                 <img src={logo} alt=""/>
                 <Form>
-                    <input type="email" placeholder="E-mail" required />
-                    <input type="password" placeholder="Senha" required />
-                    <button type="submit"><strong>Entrar</strong></button>
+                    <input type="email" placeholder="E-mail" required data-test="email"/>
+                    <input type="password" placeholder="Senha" required data-test="password"/>
+                    <button type="submit" data-test="sign-in-submit"><strong>Entrar</strong></button>
                     <br />
                     <Link to="/cadastro">
                         <p>Primeira vez? Cadastre-se!</p>
