@@ -22,8 +22,17 @@ export default function Home() {
         }
         console.log(usuarioLogado.token)
         const promise = axios.get(`${process.env.REACT_APP_API_URL}/home`, config);
-        promise.then((res) => {
+        promise.then((res) => {   
+            let total = 0 
+            res.data.map((item) => {
+                if(item.tipo === "saida"){
+                   return total -= item.valor 
+                } else {
+                   return total += item.valor 
+                }
+            })
             console.log(res.data)
+            setSaldo(total)
             setLancamentos(res.data);
         })
         promise.catch((err) => console.log(err.response.data.message))
@@ -46,14 +55,14 @@ export default function Home() {
             <Registros>
                 {lancamentos.length === 0 ? (
                     <p>Não há registros de entrada ou saída</p>
-                ) : (lancamentos.map((item) => <Lancamento key={item.id}>
+                ) : (lancamentos.map((item) => <Lancamento key={item.id} tipo={item.tipo}>
                     <div className="dia">{item.dia}</div>
                     <div className="descricao" data-test="registry-name">{item.descricao}</div>
-                    <div className="valor" data-test="registry-amount" tipo={item.tipo}>{item.valor}</div>
+                    <div className="valor" data-test="registry-amount" >{item.valor.toFixed(2).replace(".", ",")}</div>
                 </Lancamento>)
                 )}
             </Registros>
-            <Saldo>
+            <Saldo saldo={saldo}>
                 <span className="saldo"><strong>SALDO</strong></span>
                 <span className="total" data-test="total-amount">{saldo.toFixed(2).replace(".", ",")}</span>
             </Saldo>

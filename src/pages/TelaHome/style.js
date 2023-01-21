@@ -59,7 +59,7 @@ export const Lancamento = styled.div`
         justify-content: flex-end;
         margin-right: 10px;
         width:62px;
-        color: ${props => props.tipo === "entrada" ? "#C70000" : "#03AC00"};
+        color: ${props => props.tipo === "saida" ? "#C70000" : "#03AC00"};
     }
     
 `
@@ -80,6 +80,7 @@ export const Saldo = styled.div`
     margin-right:10px;
     margin-top:10px;
     margin-bottom:10px;
+    color: ${props => props.saldo > 0 ? "#03AC00" : "#C70000"} 
    }
 `
 

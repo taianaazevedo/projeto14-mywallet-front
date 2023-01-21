@@ -21,7 +21,7 @@ export default function NovaSaida() {
                 Authorization: `Bearer ${usuarioLogado.token}`
             }
         }
-        const promise = axios.post(`${process.env.REACT_APP_API_URL}/nova-entrada`, body, config);
+        const promise = axios.post(`${process.env.REACT_APP_API_URL}/nova-saida`, body, config);
         promise.then((res) => {
             alert("Nova saída registrada!")
             navigate("/home")
@@ -33,7 +33,7 @@ export default function NovaSaida() {
         <Container>
             <p className="info">Nova saída</p>
             <Form onSubmit={salvaSaida}>
-                <input type="text" placeholder="Valor" value={valor} onChange={(e) => setValor(e.target.value)} required data-test="registry-amount-input" />
+                <input type="number" placeholder="Valor" value={valor} onChange={(e) => setValor(e.target.value)} required data-test="registry-amount-input" />
                 <input type="text" placeholder="Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value)} required data-test="registry-name-input" />
                 <button type="submit" data-test="registry-save">Salvar saída</button>
             </Form>

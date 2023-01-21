@@ -11,6 +11,8 @@ export default function NovaEntrada() {
     const { usuarioLogado } = useContext(UsuarioContext);
     const navigate = useNavigate()
 
+    console.log(usuarioLogado)
+
 
     function salvaEntrada(e){
         e.preventDefault()
@@ -35,7 +37,7 @@ export default function NovaEntrada() {
         <Container>
             <p className="info">Nova Entrada</p>
             <Form onSubmit={salvaEntrada}>
-                <input type="text" placeholder="Valor" value={valor} onChange={(e) => setValor(e.target.value)} required data-test="registry-amount-input"/>
+                <input type="number" placeholder="Valor" value={valor} onChange={(e) => setValor(e.target.value)} required data-test="registry-amount-input"/>
                 <input type="text" placeholder="Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value)}required data-test="registry-name-input"/>
                 <button type="submit" data-test="registry-save">Salvar entrada</button>
             </Form>
