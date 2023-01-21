@@ -21,6 +21,8 @@ export default function Login() {
         const body = { email, senha };
         const promise = axios.post(`${process.env.REACT_APP_API_URL}/`, body);
         promise.then((res) => {
+            // console.log(res.data)
+            alert("Login realizado com sucesso! :)")
             setUsuarioLogado(res.data);
             navigate("/home");
         });

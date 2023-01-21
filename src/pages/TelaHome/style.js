@@ -59,7 +59,7 @@ export const Lancamento = styled.div`
         justify-content: flex-end;
         margin-right: 10px;
         width:62px;
-        color:#C70000;
+        color: ${props => props.tipo === "entrada" ? "#C70000" : "#03AC00"};
     }
     
 `
