@@ -34,7 +34,7 @@ export default function Login() {
                 <Form onSubmit={login}>
                     <input type="email" placeholder="E-mail" required data-test="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                     <input type="password" placeholder="Senha" required data-test="password" value={senha} onChange={(e) => setSenha(e.target.value)} />
-                    <button type="submit" data-test="sign-in-submit">Entrar</button>
+                    <button type="submit" data-test="sign-in-submit"><strong>Entrar</strong></button>
                 </Form>
                 <br />
                 <Link to="/cadastro">

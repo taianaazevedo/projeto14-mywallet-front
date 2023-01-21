@@ -9,7 +9,9 @@ export default function Home() {
         <Container>
             <Header>
                 <p data-test="user-name">Olá, fulano</p>
+                <Link to="/">
                 <img src={exit} alt="" data-test="logout" />
+                </Link>                
             </Header>
             <Registros>
                 {/* <p>Não há registros de entrada ou saída</p> */}
