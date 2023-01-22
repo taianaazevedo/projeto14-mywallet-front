@@ -11,7 +11,6 @@ export default function NovaEntrada() {
     const { usuarioLogado } = useContext(UsuarioContext);
     const navigate = useNavigate()
 
-    console.log(usuarioLogado)
 
 
     function salvaEntrada(e){

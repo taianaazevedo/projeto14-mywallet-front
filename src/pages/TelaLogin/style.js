@@ -4,7 +4,7 @@ export const Form = styled.form`
     display: flex; 
     flex-direction: column;
     align-items: center;
-    margin-top:5px;
+    margin-top:100px;
     input {
         margin-top: 10px;
         width:300px;
@@ -35,10 +35,35 @@ export const Tela = styled.div`
         cursor: pointer;
     }
     img {
-        margin-top:160px;
+        margin-top:110px;
         width:140px;
         height: 35px;
+        animation: slide-bottom 0.8s ease-in-out both;
+        animation-name: slide-bottom;
     }
+    
+    @-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+
     button{
         margin-top: 10px;
         background-color: #A328D6;

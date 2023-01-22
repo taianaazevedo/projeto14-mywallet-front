@@ -32,7 +32,7 @@ export default function Login() {
     return (
         <Container>
             <Tela>
-                <img src={logo} alt="" />
+                <img src={logo} alt=""/>
                 <Form onSubmit={login}>
                     <input type="email" placeholder="E-mail" required data-test="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                     <input type="password" placeholder="Senha" required data-test="password" value={senha} onChange={(e) => setSenha(e.target.value)} />

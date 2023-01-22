@@ -20,7 +20,6 @@ export default function Home() {
             }
             
         }
-        console.log(usuarioLogado.token)
         const promise = axios.get(`${process.env.REACT_APP_API_URL}/home`, config);
         promise.then((res) => {   
             let total = 0 
@@ -31,7 +30,6 @@ export default function Home() {
                    return total += item.valor 
                 }
             })
-            console.log(res.data)
             setSaldo(total)
             setLancamentos(res.data);
         })
@@ -55,7 +53,7 @@ export default function Home() {
             <Registros>
                 {lancamentos.length === 0 ? (
                     <p>Não há registros de entrada ou saída</p>
-                ) : (lancamentos.map((item) => <Lancamento key={item.id} tipo={item.tipo}>
+                ) : (lancamentos.map((item) => <Lancamento key={item._id} tipo={item.tipo}>
                     <div className="dia">{item.dia}</div>
                     <div className="descricao" data-test="registry-name">{item.descricao}</div>
                     <div className="valor" data-test="registry-amount" >{item.valor.toFixed(2).replace(".", ",")}</div>
