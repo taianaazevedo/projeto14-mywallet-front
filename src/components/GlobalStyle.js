@@ -52,6 +52,6 @@ a{
 	text-decoration: none;
 }
 
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
