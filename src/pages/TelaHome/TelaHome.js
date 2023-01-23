@@ -20,6 +20,7 @@ export default function Home() {
             }
             
         }
+
         const promise = axios.get(`${process.env.REACT_APP_API_URL}/home`, config);
         promise.then((res) => {   
             let total = 0 
@@ -56,13 +57,13 @@ export default function Home() {
                 ) : (lancamentos.map((item) => <Lancamento key={item._id} tipo={item.tipo}>
                     <div className="dia">{item.dia}</div>
                     <div className="descricao" data-test="registry-name">{item.descricao}</div>
-                    <div className="valor" data-test="registry-amount" >{item.valor.toFixed(2).replace(".", ",")}</div>
+                    <div className="valor" data-test="registry-amount" >{item.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</div>
                 </Lancamento>)
                 )}
             </Registros>
             <Saldo saldo={saldo}>
                 <span className="saldo"><strong>SALDO</strong></span>
-                <span className="total" data-test="total-amount">{saldo.toFixed(2).replace(".", ",")}</span>
+                <span className="total" data-test="total-amount">{saldo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
             </Saldo>
             <AddInfo>
                 <div className="addEntrada">
